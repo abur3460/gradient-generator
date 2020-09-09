@@ -1,0 +1,51 @@
+// mobile
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+}
+
+// tablet
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+}
+
+// desktop
+@media only screen and (min-width: 1201px) {
+	#canvas {
+		width: 100vw;
+		height: 100vh;
+		background-image: linear-gradient(to right, #09d4ca, #bd1677);
+		position: absolute;
+	}
+	a {
+		text-decoration: none;
+		line-height: 80px;
+		color: black;
+	}
+	a {
+		color: #58427e;
+		position: relative;
+	}
+	a:before,
+	a:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #23143e;
+	}
+	a:before {
+		transform: translateY(-100%);
+	}
+	a:after {
+		transform: translateY(100%);
+	}
+	a:hover {
+		color: #cec8d9;
+	}
+	a:hover:before {
+		transform: translateY(-50%);
+	}
+	a:hover:after {
+		transform: translateY(50%);
+	}
+}

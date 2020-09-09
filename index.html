@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="ICON" type="image/ico" href="favicon.ico" />
+		<title>Gradient Generator</title>
+		<meta
+			name="description"
+			content="A simple, visually appealing gradient generator to get those design juices flowing."
+		/>
+		<meta charset="utf-8" />
+		<link rel="ICON" type="image/ico" href="favicon.ico" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+		/>
+		<base href="/" />
+		<link rel="stylesheet/less" type="text/css" href="./less/index.less" />
+	</head>
+	<body class="site-wrapper">
+		<div id="canvas">
+			<div class="control">
+				<div class="top">
+					<div class="left">
+						<div class="d-select"></div>
+					</div>
+
+					<div class="right">
+						<div class="c-select"></div>
+						<div class="c-select"></div>
+					</div>
+				</div>
+				<div class="bottom">
+					<a
+						onClick="setGradient(100, Math.floor(Math.random()*16777215).toString(16), Math.floor(Math.random()*16777215).toString(16))"
+					>
+						Apply Gradient
+					</a>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+		<script>
+			function setGradient(deg, color1, color2) {
+				console.log(color1, color2);
+				document.getElementById(
+					'canvas'
+				).style.backgroundImage = `linear-gradient(${deg}deg, #${color1}, #${color2})`;
+			}
+		</script>
+	</body>
+</html>
