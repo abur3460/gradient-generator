@@ -10,42 +10,93 @@
 @media only screen and (min-width: 1201px) {
 	#canvas {
 		width: 100vw;
-		height: 100vh;
-		background-image: linear-gradient(to right, #09d4ca, #bd1677);
-		position: absolute;
-	}
-	a {
-		text-decoration: none;
-		line-height: 80px;
-		color: black;
-	}
-	a {
-		color: #58427e;
-		position: relative;
-	}
-	a:before,
-	a:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background-color: #23143e;
-	}
-	a:before {
-		transform: translateY(-100%);
-	}
-	a:after {
-		transform: translateY(100%);
-	}
-	a:hover {
-		color: #cec8d9;
-	}
-	a:hover:before {
-		transform: translateY(-50%);
-	}
-	a:hover:after {
-		transform: translateY(50%);
+		min-height: 100vh;
+		background: linear-gradient(@deg, @color-1, @color-2);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.control {
+			width: 75%;
+			height: 30vh;
+			background: @main-color;
+
+			.top {
+				margin: 0 auto;
+				position: relative;
+				top: 20%;
+				display: flex;
+				justify-content: center;
+				width: 90%;
+				height: 65%;
+				.cc {
+					color: white;
+					border: 2px solid white;
+					height: 3.5rem;
+					width: 6rem;
+					line-height: 3.2rem;
+					font-weight: bolder;
+					text-align: center;
+					font-size: 1.3rem;
+
+					&.one {
+						background: @color-1;
+					}
+					&.two {
+						background: @color-2;
+					}
+				}
+				#gradient-bar {
+					margin: 0 auto;
+					background: linear-gradient(@deg, @color-1, @color-2);
+					width: 80%;
+					height: 3.5rem;
+					border: 2px solid white;
+					position: relative;
+					border-radius: 0;
+					span {
+						width: 20px;
+						height: 62.5px;
+
+						border: 2px solid white;
+						position: absolute;
+					}
+
+					span:nth-child(1) {
+						background: mix(@color-1, @color-2, @slider-val1);
+					}
+					span:nth-child(2) {
+						background: mix(@color-1, @color-2, @slider-val2);
+					}
+				}
+			}
+			.bottom {
+				width: 80%;
+				display: flex;
+				justify-content: center;
+				margin: 0 auto;
+				position: relative;
+				top: -10px;
+				a {
+					-webkit-user-select: none;
+					   -moz-user-select: none;
+					    -ms-user-select: none;
+					        user-select: none;
+					background: none;
+					text-transform: uppercase;
+					cursor: pointer;
+					position: relative;
+					display: block;
+					text-align: center;
+					font-size: 1.4rem;
+					color: white;
+					transition: 0.1s ease-in-out;
+					border: 2px solid white;
+					padding: 22px;
+				}
+				a:hover {
+					background: rgba(255, 255, 255, 0.116);
+				}
+			}
+		}
 	}
 }

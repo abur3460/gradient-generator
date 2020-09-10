@@ -15,38 +15,54 @@
 			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
 		/>
 		<base href="/" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css"
+		/>
 		<link rel="stylesheet/less" type="text/css" href="./less/index.less" />
+		<link rel="stylesheet" type="text/css" href="./index.css" />
 	</head>
 	<body class="site-wrapper">
 		<div id="canvas">
+			<div class="cp-modal">
+				<div class="cp-modal-content">
+					<div class="top">
+						<div class="left"></div>
+						<div class="middle"></div>
+						<div class="right"></div>
+					</div>
+					<div class="bottom">
+						<div class="left"></div>
+						<div class="right"></div>
+					</div>
+				</div>
+			</div>
 			<div class="control">
 				<div class="top">
-					<div class="left">
-						<div class="d-select"></div>
-					</div>
-
-					<div class="right">
-						<div class="c-select"></div>
-						<div class="c-select"></div>
-					</div>
+					<div id="cc-one" class="cc one">6e1b55</div>
+					<div id="gradient-bar"></div>
+					<div id="cc-two" class="cc two">#4d8fcc</div>
 				</div>
 				<div class="bottom">
 					<a
-						onClick="setGradient(100, Math.floor(Math.random()*16777215).toString(16), Math.floor(Math.random()*16777215).toString(16))"
+						onClick="setGradient(100, 
+						Math.random().toString(16).substr(2,6), 
+						Math.random().toString(16).substr(2,6))"
 					>
-						Apply Gradient
+						New Gradient
 					</a>
 				</div>
 			</div>
 		</div>
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
-		<script>
-			function setGradient(deg, color1, color2) {
-				console.log(color1, color2);
-				document.getElementById(
-					'canvas'
-				).style.backgroundImage = `linear-gradient(${deg}deg, #${color1}, #${color2})`;
-			}
-		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script src="./index.js"></script>
 	</body>
 </html>
