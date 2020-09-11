@@ -25,6 +25,10 @@
 			href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css"
 		/>
 		<link
+			href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css"
+			rel="stylesheet"
+		/>
+		<link
 			rel="stylesheet"
 			type="text/css"
 			href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css"
@@ -49,13 +53,14 @@
 			</div>
 			<div class="control">
 				<div class="top">
-					<div id="cp-one" class="cc one">6e1b55</div>
+					<div id="cp-one" class="cc one">#6e1b55</div>
 					<input id="cs-one" class="cc one" />
 					<div id="gradient-bar"></div>
 					<div id="cp-two" class="cc two">#4d8fcc</div>
 					<input id="cs-two" class="cc two" />
 				</div>
 				<div class="bottom">
+					<div id="slider"></div>
 					<a
 						onClick="setGradient(100, 
 						Math.random().toString(16).substr(2,6), 
@@ -70,6 +75,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/roundSlider/1.6.1/roundslider.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.js"></script>
 		<script src="./index.js"></script>
 	</body>
