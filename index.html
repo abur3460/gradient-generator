@@ -24,10 +24,7 @@
 			rel="stylesheet"
 			href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css"
 		/>
-		<link
-			href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css"
-			rel="stylesheet"
-		/>
+
 		<link
 			rel="stylesheet"
 			type="text/css"
@@ -35,34 +32,27 @@
 		/>
 		<link rel="stylesheet/less" type="text/css" href="./less/index.less" />
 		<link rel="stylesheet" type="text/css" href="./index.css" />
+
+		<script
+			src="https://kit.fontawesome.com/2d028e3003.js"
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body class="site-wrapper">
 		<div id="canvas">
-			<div class="cp-modal">
-				<div class="cp-modal-content">
-					<div class="top">
-						<div class="left"></div>
-						<div class="middle"></div>
-						<div class="right"></div>
-					</div>
-					<div class="bottom">
-						<div class="left"></div>
-						<div class="right"></div>
-					</div>
-				</div>
-			</div>
 			<div class="control">
+				<div class="current">linear-gradient(90, #f8757f, #4cc7d4)</div>
 				<div class="top">
-					<div id="cp-one" class="cc one">#6e1b55</div>
+					<div id="cp-one" class="cc one">#f8757f</div>
 					<input id="cs-one" class="cc one" />
 					<div id="gradient-bar"></div>
-					<div id="cp-two" class="cc two">#4d8fcc</div>
+					<div id="cp-two" class="cc two">#4cc7d4</div>
 					<input id="cs-two" class="cc two" />
 				</div>
 				<div class="bottom">
-					<div id="slider"></div>
 					<a
-						onClick="setGradient(100, 
+						class="gradient-btn"
+						onClick="setGradient(90, 
 						Math.random().toString(16).substr(2,6), 
 						Math.random().toString(16).substr(2,6))"
 					>
