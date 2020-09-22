@@ -1,5 +1,143 @@
 // mobile
 @media only screen and (min-width: 0px) and (max-width: 600px) {
+	#canvas {
+		width: 100vw;
+		min-height: 100vh;
+		background: linear-gradient(@deg, @color-1, @color-2);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.control {
+			width: 75%;
+			height: 65vh;
+			background: @main-color;
+			border: 1px solid white;
+			display: flex;
+			flex-direction: column;
+			.current {
+				background-color: @accent-color;
+				padding: 5px 10px 7px 10px;
+				border: 1px solid white;
+				color: white;
+				font-weight: bolder;
+				width: 90%;
+				font-size: 0.8rem;
+				text-align: center;
+				margin: 1.5rem auto -1rem auto;
+				position: relative;
+				top: 10%;
+			}
+			.top {
+				margin: 0 auto;
+				position: relative;
+				top: 32.5%;
+				display: flex;
+				justify-content: center;
+				width: 90%;
+				height: 22.5%;
+				::-webkit-input-placeholder {
+					color: white;
+					opacity: 1;
+				}
+				::-moz-placeholder {
+					color: white;
+					opacity: 1;
+				}
+				:-ms-input-placeholder {
+					color: white;
+					opacity: 1;
+				}
+				::-ms-input-placeholder {
+					color: white;
+					opacity: 1;
+				}
+				::placeholder {
+					color: white;
+					opacity: 1;
+				}
+				#cc-one,
+				#cc-two {
+					width: 4rem;
+					height: 2rem;
+				}
+
+				.cc {
+					color: white;
+					border: 1px solid white;
+					height: 3.5rem;
+					width: 25%;
+					line-height: 3.3rem;
+					font-weight: bolder;
+					text-align: center;
+					font-size: 0.8rem;
+					cursor: pointer;
+					&.one {
+						background: @color-1;
+					}
+					&.two {
+						background: @color-2;
+					}
+				}
+				#gradient-bar {
+					margin: 0 auto;
+					background: linear-gradient(to right, @color-1, @color-2);
+					width: 50%;
+					height: 3.5rem;
+					border: 1px solid white;
+					border-left: none;
+					border-right: none;
+					position: relative;
+					border-radius: 0;
+				}
+			}
+			.top div:nth-child(3) {
+				position: absolute;
+				opacity: 0;
+				z-index: -100;
+				top: 40px;
+				left: 0px;
+			}
+			.top div:nth-child(7) {
+				position: absolute;
+				opacity: 0;
+				z-index: -100;
+				top: 40px;
+				right: 147px;
+			}
+			.bottom {
+				width: 80%;
+				height: 80%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				margin: 0 auto;
+				position: relative;
+				.gradient-btn {
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					user-select: none;
+					background: none;
+					text-transform: uppercase;
+					width: 80%;
+					cursor: pointer;
+					position: relative;
+					top: 20%;
+					display: block;
+					text-align: center;
+					font-size: 1.2rem;
+					color: white;
+					transition: 0.1s ease-in-out;
+					border: 1px solid white;
+					padding: 20px 0px;
+					margin: 0 auto;
+				}
+				.gradient-btn:hover {
+					background: rgba(255, 255, 255, 0.116);
+				}
+			}
+		}
+	}
 }
 
 // tablet
