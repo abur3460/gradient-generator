@@ -162,6 +162,7 @@
 			border: 1px solid white;
 			display: flex;
 			flex-direction: column;
+			position: relative;
 			.current {
 				background-color: @accent-color;
 				padding: 5px 10px 7px 10px;
@@ -170,6 +171,24 @@
 				font-weight: bolder;
 				font-size: 1.1rem;
 				margin: 1.5rem auto -1rem auto;
+				cursor: pointer;
+				position: relative;
+			}
+			.alert {
+				color: white;
+				font-size: 0.7rem;
+				text-transform: uppercase;
+				text-align: center;
+				margin-top: 1rem;
+				margin-bottom: -1rem;
+				opacity: 0;
+				transition: all 0.1s;
+				position: absolute;
+				top: -30px;
+				left: 40%;
+			}
+			.current:hover > .alert {
+				opacity: 1;
 			}
 			.top {
 				margin: 0 auto;
@@ -262,7 +281,6 @@
 					-ms-user-select: none;
 					user-select: none;
 					background: none;
-
 					width: 30%;
 					cursor: pointer;
 					position: relative;

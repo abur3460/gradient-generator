@@ -56,6 +56,20 @@ window.onload = function () {
 	});
 };
 
+const gradient = document.getElementById('gradient');
+
+gradient.onclick = function () {
+	document.execCommand('copy');
+};
+
+gradient.addEventListener('copy', function (event) {
+	event.preventDefault();
+	if (event.clipboardData) {
+		event.clipboardData.setData('text/plain', gradient.textContent);
+		console.log(event.clipboardData.getData('text'));
+	}
+});
+
 function setDegree(deg) {
 	let degree = `to ${deg}`;
 	less.modifyVars({
