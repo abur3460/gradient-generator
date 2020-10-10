@@ -64,7 +64,7 @@ function setDegree(deg) {
 }
 
 function updateCurrent(deg, color1, color2) {
-	$('.current').text(`linear-gradient(${deg}, #${color1}, #${color2})`);
+	$('.current').text(`linear-gradient(${deg}deg, #${color1}, #${color2})`);
 }
 
 function setGradient(deg, color1, color2) {
